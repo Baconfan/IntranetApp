@@ -19,4 +19,38 @@ html {
 
 body {
   margin-bottom: 60px;
+    background-color: lightgray
+}
+
+:root {
+    --color-primary: #53D2DC;
+    --color-secondary: #3196E2;
+    --color-tertiary: #FF826C;
+    --color-quarternary: #FFC05F;
+}
+
+nav {
+    background-color: #3196E2;
+    flex-grow: 1; /* Makes nav expand to fill header */
+    display: flex;
+    justify-content: space-between;
+    /*#bcdfe4;*/
+}
+
+.navbar {
+    height: 80px;
+}
+.navbar a {
+    font-size: 28px
+}
+.nav-link {
+    color: #FFFFFF;
+}
+
+header {
+    height: 200px
+}
+
+.nav-item.active {
+    border-bottom: 2px solid whitesmoke;
 }

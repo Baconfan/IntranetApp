@@ -9,27 +9,32 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg border-bottom box-shadow mb-3 bg-dark-subtle">
+        <nav id="bg-lightblue" class="navbar navbar-expand-lg border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">GLOBALP</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Emojione_BW_1F953.svg" alt="Brandlogo" height="36" />
+                </a>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" title="Zur Startseite" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        @{
+                            var title = ViewData["Title"] ?? "";
+}
+                        <li class="nav-item @(title.Equals("Home") ? "active" : "")">
+                            <a class="nav-link" title="Zur Startseite" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" title="Zum Unternehmenswiki" asp-area="" asp-controller="Home" asp-action="Privacy">Wiki</a>
+                        <li class="nav-item  @(title.Equals("Wiki") ? "active" : "")">
+                            <a class="nav-link" title="Zum Unternehmenswiki" asp-area="" asp-controller="Wiki" asp-action="Index">Wiki</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" title="Zur Übersicht von abgeschlossenen, laufenden und geplanten Projekten" asp-area="" asp-controller="Home" asp-action="Privacy">Projekte</a>
+                        <li class="nav-item @(title.Equals("Projects") ? "active" : "")">
+                            <a class="nav-link" title="Zur Übersicht von abgeschlossenen, laufenden und geplanten Projekten" asp-area="" asp-controller="Projects" asp-action="Index">Projekte</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" title="Zur Sammlung von nützlichen externen Links" asp-area="" asp-controller="Home" asp-action="Privacy">Externe Links</a>
+                        <li class="nav-item @(title.Equals("Coworkers") ? "active" : "")">
+                            <a class="nav-link" title="Zur Sammlung von nützlichen externen Links" asp-area="" asp-controller="Coworkers" asp-action="Index">Mitarbeiter</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav align-content-end">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Help">Help</a>
+                        <li class="nav-item @(title.Equals("Help") ? "active" : "")">
+                            <a class="nav-link" asp-area="" asp-controller="Help" asp-action="Index">Hilfe</a>
                         </li>
                     </ul>
                 </div>
@@ -41,10 +46,8 @@
             @RenderBody()
         </main>
     </div>
-
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2025 - Intranet_Frontend - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

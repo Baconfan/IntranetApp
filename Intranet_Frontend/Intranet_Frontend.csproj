@@ -17,4 +17,8 @@
     <Folder Include="wwwroot\js\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\company_icon.svg" />
+  </ItemGroup>
+
 </Project>

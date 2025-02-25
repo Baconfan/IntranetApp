@@ -1,14 +1,16 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
+    Layout = "_Layout";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Willkommen im Intranet</h1>
+    <h1 class="display-4" align="left">Willkommen Alex</h1>
+    <h5 align="left">Wonach suchst du? </h5>
 </div>
-<div style="" class="container">
+<div style="padding-left:0" class="container">
     <div class="row">
         <div class="col-9"><input id="input-search" class="form-control" placeholder="Suche nach Personen, Dokumenten, ..."/></div>
-        <div class="col-3"><button id="btn-search" type="submit" class="btn btn-primary">Suchen</button></div>
+        <div class="col-3"><button id="btn-search" type="submit" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Im System suchen">Suchen</button></div>
     </div>
 </div>
 <div class="container">

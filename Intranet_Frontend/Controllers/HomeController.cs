@@ -18,16 +18,6 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Privacy()
-    {
-        return View();
-    }
-
-    public IActionResult Help()
-    {
-        return View();
-    }
-
     [HttpGet]
     public async Task<IActionResult> GetMatchingElements(string? searchTerm)
     {
