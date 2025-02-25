@@ -1,0 +1,6 @@
+@Task_Microservice_HostAddress = http://localhost:5293
+
+GET {{Task_Microservice_HostAddress}}/api/todo/recent/1
+Accept: application/json
+
+###
