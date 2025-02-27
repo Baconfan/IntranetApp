@@ -1,0 +1,6 @@
+@HumanResource_Microservice_HostAddress = http://localhost:5276
+
+GET {{HumanResource_Microservice_HostAddress}}/employee/ById/1
+Accept: application/json
+
+###

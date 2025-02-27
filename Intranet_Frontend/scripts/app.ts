@@ -1,4 +1,7 @@
-﻿document.addEventListener("DOMContentLoaded", () => {
+﻿import $ from "jquery";
+import "select2";
+
+document.addEventListener("DOMContentLoaded", () => {
     const searchInput = document.getElementById("input-search") as HTMLInputElement;
     const button = document.getElementById("btn-search");
     const resultDiv = document.getElementById("result-search");
@@ -22,3 +25,24 @@
         });
     }
 });
+
+/*
+$(function() {
+    $("#search-box").select2({
+        ajax: {
+            url: "/Home/Autocomplete",
+            dataType: "json",
+            delay: 250, // Prevent too many requests
+            data: (params) => ({
+                searchTerm: params.term // The search term
+            }),
+            processResults: (data) => ({
+                results: data // Select2 expects { id, text } objects
+            })
+        },
+        minimumInputLength: 2, // Start search after 2 characters
+        placeholder: "Search for an item...",
+        allowClear: true
+    });
+});
+*/

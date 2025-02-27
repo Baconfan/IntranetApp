@@ -7,7 +7,8 @@
     "sourceMap": true,
     "target": "ES6",
     "outDir": ".obj/ts/",
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true
   },
   "exclude": [
     "node_modules",

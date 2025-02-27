@@ -3,12 +3,8 @@ using Task_Microservice.Models.Entities;
 
 namespace Task_Microservice.Persistence
 {
-    public class ServiceDbContext: DbContext
+    public class ServiceDbContext(DbContextOptions options) : DbContext(options)
     {
-        public ServiceDbContext(DbContextOptions options): base(options)
-        {
-        }
-
         public DbSet<ToDoItem> ToDoItems { get; set; }
     }
 }

@@ -6,6 +6,8 @@ namespace Intranet_Frontend.Controllers
     {
         public IActionResult Index()
         {
+            // Get the projects from the database
+
             return View("Projects");
         }
     }

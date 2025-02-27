@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using System.Net.Mime;
 using Microsoft.AspNetCore.Mvc;
 using Intranet_Frontend.Models;
 
@@ -29,6 +30,15 @@ public class HomeController : Controller
         }
 
         return Ok(matchingElements);
+    }
+
+    [HttpGet]
+    [Consumes(MediaTypeNames.Application.Json)]
+    public JsonResult GetElementsForTypeahead(string? searchTerm)
+    {
+        var matchingElements = new List<string> { "Alice", "Bob", "Jack" };
+
+        return new JsonResult(matchingElements);
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

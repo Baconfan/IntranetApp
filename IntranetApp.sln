@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task_Microservice_UnitTest"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intranet_Frontend", "Intranet_Frontend\Intranet_Frontend.csproj", "{87208440-E203-4318-840D-690AFD093A6D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HumanResource_Microservice", "HumanResource_Microservice\HumanResource_Microservice.csproj", "{51F70322-3663-4E5C-918B-CC302EA32840}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HumanResource_Microservice_UnitTest", "HumanResource_Microservice_UnitTest\HumanResource_Microservice_UnitTest.csproj", "{B7B9230E-7577-4169-9619-94780C265C0E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{87208440-E203-4318-840D-690AFD093A6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87208440-E203-4318-840D-690AFD093A6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87208440-E203-4318-840D-690AFD093A6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51F70322-3663-4E5C-918B-CC302EA32840}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51F70322-3663-4E5C-918B-CC302EA32840}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51F70322-3663-4E5C-918B-CC302EA32840}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51F70322-3663-4E5C-918B-CC302EA32840}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7B9230E-7577-4169-9619-94780C265C0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7B9230E-7577-4169-9619-94780C265C0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7B9230E-7577-4169-9619-94780C265C0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7B9230E-7577-4169-9619-94780C265C0E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
