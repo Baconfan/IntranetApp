@@ -6,6 +6,7 @@
     <title>@ViewData["Title"] - Intranet_Frontend</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 </head>
 <body>
     <header>
@@ -18,9 +19,9 @@
                     <ul class="navbar-nav flex-grow-1">
                         @{
                             var title = ViewData["Title"] ?? "";
-}
+                        }
                         <li class="nav-item @(title.Equals("Home") ? "active" : "")">
-                            <a class="nav-link" title="Zur Startseite" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link" title="Zur Startseite" asp-area="" asp-controller="Home" asp-action="Index"><i class="fa-solid fa-house"></i></a>
                         </li>
                         <li class="nav-item  @(title.Equals("Wiki") ? "active" : "")">
                             <a class="nav-link" title="Zum Unternehmenswiki" asp-area="" asp-controller="Wiki" asp-action="Index">Wiki</a>
@@ -32,9 +33,18 @@
                             <a class="nav-link" title="Zur Sammlung von nützlichen externen Links" asp-area="" asp-controller="Coworkers" asp-action="Index">Mitarbeiter</a>
                         </li>
                     </ul>
+                    <form class="d-flex justify-content-center">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
                     <ul class="navbar-nav align-content-end">
                         <li class="nav-item @(title.Equals("Help") ? "active" : "")">
-                            <a class="nav-link" asp-area="" asp-controller="Help" asp-action="Index">Hilfe</a>
+                            <a class="nav-link" title="Hilfe" asp-area="" asp-controller="Help" asp-action="Index">
+                                <span class="fa-stack">
+                                    <i class="fa-regular fa-circle fa-stack-2x"></i>
+                                    <i class="fa-solid fa-question fa-stack-1x"></i>
+                                </span>
+                            </a>
                         </li>
                     </ul>
                 </div>

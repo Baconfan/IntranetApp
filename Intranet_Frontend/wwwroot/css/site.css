@@ -29,6 +29,10 @@ body {
     --color-quarternary: #FFC05F;
 }
 
+.btn {
+    background-color: var(--color-quarternary);
+}
+
 nav {
     background-color: #3196E2;
     flex-grow: 1; /* Makes nav expand to fill header */
@@ -48,9 +52,23 @@ nav {
 }
 
 header {
-    height: 200px
+    height: 100px
 }
 
 .nav-item.active {
     border-bottom: 2px solid whitesmoke;
+}
+
+.c-item {
+    height: 300px;
+}
+
+.c-img {
+    height: 100%;
+    object-fit: cover;
+}
+
+li a {
+    margin-left: 10px;
+    margin-right: 10px;
 }
