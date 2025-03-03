@@ -1,7 +1,22 @@
-﻿import $ from "jquery";
+﻿// Import jQuery
+import $ from "jquery";
+
+// Import Select2
 import "select2";
 
+import "bootstrap";
+
+declare var bootstrap: any;
+
 document.addEventListener("DOMContentLoaded", () => {
+    $('#basic-usage').select2({
+        //theme: "bootstrap-5",
+        width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
+        placeholder: $(this).data('placeholder'),
+        tags: true
+    });
+    
+
     const searchInput = document.getElementById("input-search") as HTMLInputElement;
     const button = document.getElementById("btn-search");
     const resultDiv = document.getElementById("result-search");
@@ -19,12 +34,21 @@ document.addEventListener("DOMContentLoaded", () => {
                 } else {
                     alert("Ein Fehler ist aufgetreten.");
                 }
-            } catch(error) {
+            } catch (error) {
                 alert("Ein Fehler ist aufgetreten.");
             }
         });
     }
 });
+
+/* Select all elements with tooltips
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+
+ Initialize tooltips
+tooltipTriggerList.forEach(tooltipTriggerEl => {
+    new bootstrap.Tooltip(tooltipTriggerEl as HTMLElement);
+});
+*/
 
 /*
 $(function() {
@@ -46,3 +70,18 @@ $(function() {
     });
 });
 */
+
+let testData = [
+    {
+        id: 0,
+        text: 'Alex'
+    },
+    {
+        id: 1,
+        text: 'Alexa'
+    },
+    {
+        id: 2,
+        text: 'Alexandra'
+    }
+];

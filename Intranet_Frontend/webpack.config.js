@@ -1,7 +1,8 @@
 ﻿const path = require("path");
-var webpack = require('webpack');
+var webpack = require("webpack");
 
 module.exports = {
+    
     entry: "./scripts/app.ts", // Your main TypeScript file
     output: {
         filename: "./js/bundle.js",

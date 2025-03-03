@@ -9,7 +9,7 @@ namespace Intranet_Frontend.Controllers
             return View("Coworkers");
         }
 
-        [HttpGet("Coworkers/{id:int}")]
+        [HttpGet("[controller]/{id:int}")]
         public async Task<IActionResult> SearchCoworkerById(int id)
         {
             var httpRequestMessage = new HttpRequestMessage(HttpMethod.Get, $"http://localhost:5276/api/Employee/ById/{id}");
@@ -23,6 +23,12 @@ namespace Intranet_Frontend.Controllers
 
             var result = await response.Content.ReadAsStringAsync();
             return Ok(result);
+        }
+
+        [HttpGet("[controller]/new")]
+        public async Task<IActionResult> SearchNewestCoworkers()
+        {
+            return Ok();
         }
     }
 }

@@ -32,11 +32,24 @@ public class HomeController : Controller
         return Ok(matchingElements);
     }
 
-    [HttpGet]
+    [HttpGet("search")]
     [Consumes(MediaTypeNames.Application.Json)]
-    public JsonResult GetElementsForTypeahead(string? searchTerm)
+    public JsonResult GetElementsForTypeahead([FromQuery] string? searchTerm)
     {
-        var matchingElements = new List<string> { "Alice", "Bob", "Jack" };
+        // No search term, no search.
+        if (searchTerm is null or "")
+        {
+            return new JsonResult(new List<string>());
+        }
+
+        // TODO: Implement search logic.
+        // var matchingElements = new List<string> { "Alice", "Bob", "Jack" };
+        var matchingElements = new List<Select2ListItem>()
+        {
+            new () { Id = 1, Text = "Alice" },
+            new () { Id = 2, Text = "Bob" },
+            new () { Id = 3, Text = "Jack" }
+        };
 
         return new JsonResult(matchingElements);
     }

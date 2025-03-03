@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HumanResource_Microservice"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HumanResource_Microservice_UnitTest", "HumanResource_Microservice_UnitTest\HumanResource_Microservice_UnitTest.csproj", "{B7B9230E-7577-4169-9619-94780C265C0E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntranetLibrary", "IntranetLibrary\IntranetLibrary.csproj", "{327993B8-7D3D-4AFF-8715-D53908FCBF70}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{B7B9230E-7577-4169-9619-94780C265C0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7B9230E-7577-4169-9619-94780C265C0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7B9230E-7577-4169-9619-94780C265C0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{327993B8-7D3D-4AFF-8715-D53908FCBF70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{327993B8-7D3D-4AFF-8715-D53908FCBF70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{327993B8-7D3D-4AFF-8715-D53908FCBF70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{327993B8-7D3D-4AFF-8715-D53908FCBF70}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

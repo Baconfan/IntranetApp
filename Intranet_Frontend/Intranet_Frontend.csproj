@@ -21,4 +21,8 @@
     <None Include="wwwroot\company_icon.svg" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\IntranetLibrary\IntranetLibrary.csproj" />
+  </ItemGroup>
+
 </Project>

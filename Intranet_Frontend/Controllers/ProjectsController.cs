@@ -10,5 +10,11 @@ namespace Intranet_Frontend.Controllers
 
             return View("Projects");
         }
+
+        public IActionResult Details(int id)
+        {
+            // Get the project details from the database
+            return View("ProjectDetails");
+        }
     }
 }
