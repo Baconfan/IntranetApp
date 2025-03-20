@@ -4,3 +4,4 @@ GET {{HumanResource_Microservice_HostAddress}}/employee/ById/1
 Accept: application/json
 
 ###
+GET  {{HumanResource_Microservice_HostAddress}}/employee/all
